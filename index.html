@@ -6,80 +6,69 @@
     <title>OrderFood</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <nav class="navbar">
-      <ul class="nav-links">
-        <a href="#"
-          ><li><b>Home</b></li></a
-        >
-        <a href="#"
-          ><li><b>Order</b></li></a
-        >
-        <a href="#"
-          ><li><b>Food</b></li></a
-        >
-        <a href="#"
-          ><li><b>Restaurant</b></li></a
-        >
-        <a href="#"
-          ><li><b>Testimonials</b></li></a
-        >
-        <a href="#"
-          ><li><b>contact Us</b></li></a
-        >
-        <a href="#"
-          ><li><img src="menu-bar.png" alt="menu-bar" width="30px" /></li
-        ></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Order</a></li>
+        <li><a href="#">Food</a></li>
+        <li><a href="#">Restaurant</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#">Contact Us</a></li>
       </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
+
     <div class="first-div">
       <div class="nested-first-div">
         <h1>LOREM ISPUM</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamusid est
-          vitae dolor rhoncus tristique. Maecenas metus quam,rhoncus euismod
-          lorem in, sollicitudin viverra eros. Donecdictum luctus quam ut
-          tristique. Curabitur nec faucibus purus.Quisque congue sem nec justo
-          mollis, in tincidunt erat pretium.Sed pulvinar, massa ac porta
-          viverra.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id
+          est vitae dolor rhoncus tristique. Maecenas metus quam, rhoncus
+          euismod lorem in, sollicitudin viverra eros. Donec dictum luctus quam
+          ut tristique.
         </p>
         <button>Click Me</button>
       </div>
-      <img
-        src="pexels-robin-stickel-70497.jpg"
-        alt="burger"
-        width="750px"
-        height="750px"
-      />
+
+      <img src="pexels-robin-stickel-70497.jpg" alt="burger" class="img1" />
     </div>
+
     <div class="bottom-half">
       <div class="second-div">
         <div class="nested-second-div">
-          <img src="pexels-rachel-claire-6752433.jpg""
-          alt="pexels-rachel-claire-6752433" width="300px" class="img2">
-          <img
-            src="pexels-eva-bronzini-6141651.jpg"
-            alt="pexels-eva-bronzini-6141651"
-            width="300px"
-            class="img3"
-          />
+          <img src="pexels-rachel-claire-6752433.jpg" class="img2" />
+          <img src="pexels-eva-bronzini-6141651.jpg" class="img3" />
         </div>
-        <img
-          src="pexels-mister-mister-3434523.jpg"
-          alt="pexels-mister-mister-3434523"
-          width="300px"
-          height="515px"
-        />
+
+        <img src="pexels-mister-mister-3434523.jpg" class="img4" />
       </div>
+
       <div class="third-div">
         <p>LOREM IPSUM</p>
         <h1>LOREM IPSUM</h1>
         <h1>SET ADEMIR</h1>
+
         <div class="nested-third-div">
           <p>click</p>
           <img src="icons8-arrow-30.png" alt="arrow" />
         </div>
       </div>
     </div>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("nav-links");
+
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
