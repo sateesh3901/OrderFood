@@ -56,22 +56,35 @@ body {
 .first-div {
   display: flex;
   justify-content: space-between;
-  padding: 140px 80px 50px;
   flex-wrap: wrap;
+}
+.img1 {
+    margin-top: 0px;
+    margin-right: 0px;
+  width: 50%;
+  max-width: 700px;
+  margin: 0;        
+  padding: 0;
+  border-radius: 0; 
+  height: 100vh;
 }
 
 .nested-first-div {
   max-width: 520px;
+  margin-top: 175px;
+  margin-left: 100px;
 }
 
 .nested-first-div h1 {
   font-size: 56px;
   letter-spacing: 4px;
+  margin-bottom: 100px;
 }
 
 .nested-first-div p {
   font-size: 18px;
   margin: 35px 0;
+  margin-bottom: 75px;
 }
 
 button {
@@ -80,14 +93,6 @@ button {
   padding: 15px 70px;
   border: none;
   cursor: pointer;
-}
-
-.img1 {
-  width: 50%;
-  max-width: 700px;
-  margin: 0;        
-  padding: 0;
-  border-radius: 0; 
 }
 
 .bottom-half {
@@ -123,10 +128,12 @@ button {
 }
 
 .third-div {
+    margin-top: 50px;
   background: #ff7f6b;
   padding: 30px 60px;
   height: fit-content;
   border-radius: 0; 
+  width: 25%;
 }
 
 .nested-third-div {
@@ -135,66 +142,124 @@ button {
   margin-top: 25px;
 }
 
+/* -----------------------------------
+   📱 MOBILE — 0 to 599px
+----------------------------------- */
+@media only screen and (max-width: 599px) {
 
-@media (max-width: 992px) {
-  .first-div {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .img1 {
-    width: 100%;
-  }
-
-  .bottom-half {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-
-@media (max-width: 768px) {
-
+  /* Hamburger visible */
   .hamburger {
     display: flex;
   }
 
+  /* Navbar dropdown */
   .nav-links {
     display: none;
     flex-direction: column;
     background: #ff7b6b;
+    width: 100%;
     padding: 20px 0;
     position: absolute;
     top: 55px;
     left: 0;
-    width: 100%;
   }
 
   .nav-links.open {
     display: flex;
   }
 
+  /* Hero section */
   .first-div {
-    padding: 120px 20px;
+    flex-direction: column;
+    padding: 110px 15px 10px;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .nested-first-div {
+    width: 100%;
+    margin-right: 0;
   }
 
   .img1 {
     width: 100%;
+    margin-right: 0;
   }
 
-  .img2,
-  .img3,
-  .img4 {
+  /* Second section */
+  .second-div {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .img2, .img3, .img4 {
     width: 100%;
     height: auto;
   }
 
-  .second-div {
-    flex-direction: column;
-    width: 100%;
-  }
-
+  /* Bottom third div */
   .third-div {
     width: 100%;
+    margin-top: 20px;
+    padding: 20px;
   }
 }
+
+/* -----------------------------------
+   📱➡💻 TABLET — 600 to 1023px
+----------------------------------- */
+@media only screen and (min-width: 600px) and (max-width: 1023px) {
+
+  /* Navbar still desktop style (hamburger hidden) */
+  .hamburger {
+    display: none;
+  }
+
+  /* Hero: stacked but large image */
+  .first-div {
+    flex-direction: column;
+    padding: 140px 40px 40px;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .nested-first-div {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .img1 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* Second section grid */
+  .bottom-half {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 40px;
+    gap: 40px;
+  }
+
+  .second-div {
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .img2, .img3 {
+    width: 45%;
+    height: 260px;
+  }
+
+  .img4 {
+    width: 60%;
+    height: auto;
+  }
+
+  /* Third div */
+  .third-div {
+    width: 60%;
+    padding: 30px;
